@@ -3,6 +3,7 @@ let x = 200;
 
 function preload(){
 furby = loadImage('furby.png');
+pizza = loadImage('pizza.png');
 }
 
 function setup() {
@@ -12,18 +13,10 @@ function setup() {
 function draw() {
 
   print(mouseX, mouseY);
-  background(220);
-  background('orange')
+  
+  circle(mouseX, mouseY, 100);
 
-    while(mouseX > x){
-    background('blue');
-  }
-
-  while(mouseIsPressed == true){
-    background('purple');
-  }
-
-  image(furby, windowWidth/2, windowHeight/2);
+  image(pizza, windowWidth/2, windowHeight/2);
   fill('white')
   rect(100, 250, 300, 75,);
   
@@ -51,4 +44,10 @@ function draw() {
   circle(175, 135, 17)
   circle(180, 165, 16)
   circle(250, 164, 15)
+}
+
+function keyPressed(){
+     if (key == 'b'){
+   background(random(255), random(255), random(255));
+  }
 }
