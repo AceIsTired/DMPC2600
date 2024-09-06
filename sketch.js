@@ -2,7 +2,6 @@ let x = 200;
 
 
 function preload(){
-furby = loadImage('furby.png');
 pizza = loadImage('pizza.png');
 }
 
