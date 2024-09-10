@@ -6,10 +6,6 @@ function setup(){
 }
 
 
-
-
-
-
 function draw(){
 	if (ellBool == true){
 		ellipseBrush();

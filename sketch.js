@@ -12,7 +12,6 @@ function setup() {
 function draw() {
 
   print(mouseX, mouseY);
-  
   circle(mouseX, mouseY, 100);
 
   image(pizza, windowWidth/2, windowHeight/2);
