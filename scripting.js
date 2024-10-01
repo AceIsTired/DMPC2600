@@ -20,7 +20,7 @@ function preload(){
     loadingGif = loadImage('loading.gif');
     startButton = loadImage('start.png');
 
-    ufo = loadImage('images/ufo.png');
+    ufo = loadImage('ufo.png');
     bplanet = loadImage('bplanet.png');
     rplanet = loadImage('rplanet.png');
     screen = loadImage('panel.PNG');
