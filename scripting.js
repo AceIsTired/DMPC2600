@@ -17,16 +17,16 @@ let state = 'loadingScreen'
 
 
 function preload(){
-    loadingGif = loadImage('images/loading.gif');
-    startButton = loadImage('images/start.png');
+    loadingGif = loadImage('loading.gif');
+    startButton = loadImage('start.png');
 
     ufo = loadImage('images/ufo.png');
-    bplanet = loadImage('images/bplanet.png');
-    rplanet = loadImage('images/rplanet.png');
-    screen = loadImage('images/panel.PNG');
+    bplanet = loadImage('bplanet.png');
+    rplanet = loadImage('rplanet.png');
+    screen = loadImage('panel.PNG');
 
-    pop = loadSound('music/pop.mp3');
-    newJeans = loadSound('music/NewJeans.mp3')
+    pop = loadSound('pop.mp3');
+    newJeans = loadSound('NewJeans.mp3')
 }
 
 function setup(){
