@@ -17,16 +17,16 @@ let state = 'loadingScreen'
 
 
 function preload(){
-    loadingGif = loadImage('loading.gif');
-    startButton = loadImage('start.png');
+    loadingGif = loadImage('images/loading.gif');
+    startButton = loadImage('images/start.png');
 
     ufo = loadImage('images/ufo.png');
-    bplanet = loadImage('bplanet.png');
-    rplanet = loadImage('rplanet.png');
-    screen = loadImage('panel.PNG');
+    bplanet = loadImage('images/bplanet.png');
+    rplanet = loadImage('images/rplanet.png');
+    screen = loadImage('images/panel.PNG');
 
-    pop = loadSound('pop.mp3');
-    newJeans = loadSound('NewJeans.mp3')
+    pop = loadSound('music/pop.mp3');
+    newJeans = loadSound('music/NewJeans.mp3')
 }
 
 function setup(){
@@ -110,6 +110,7 @@ function hoverEffect(){
     //blue planet hover check
     if((mouseX >= 700 && mouseX <= 900)&&(mouseY >= 25 && mouseY <= 250)){
         image(bplanet, 675, 25, 250, 250);
+        text('Show me the data!', windowWidth/2, 600);
     }
 
     //red planet hover check
