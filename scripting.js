@@ -4,7 +4,7 @@ let ufoY = 50;
 let speedY = 1;
 
 //image elements
-let ufo, movingUfo, bplanet, rplanet, planetA, planetB, panel, screen, loadingGif, startButton;
+let ufo, movingUfo, bplanet, rplanet, planetA, planetB, panel, screen, loadingGif, startButton, showDatai, opt;
 
 //sound elements
 let pop;
@@ -24,6 +24,8 @@ function preload(){
     bplanet = loadImage('images/bplanet.png');
     rplanet = loadImage('images/rplanet.png');
     screen = loadImage('images/panel.PNG');
+    showDatai = loadImage('images/showdata.png');
+    opt = loadImage('images/settings.png');
 
     pop = loadSound('music/pop.mp3');
     newJeans = loadSound('music/NewJeans.mp3')
@@ -94,6 +96,7 @@ function mainScene(){
     planetB = image(rplanet, 1100, 200, 300, 300);
     hoverEffect();
     panel = image(screen, -250, windowHeight-250, windowWidth+600, 225);
+    textHover();
 }
 
 function aniUfo(){
@@ -110,7 +113,6 @@ function hoverEffect(){
     //blue planet hover check
     if((mouseX >= 700 && mouseX <= 900)&&(mouseY >= 25 && mouseY <= 250)){
         image(bplanet, 675, 25, 250, 250);
-        text('Show me the data!', windowWidth/2, 600);
     }
 
     //red planet hover check
@@ -124,4 +126,14 @@ function mousePressed(){
         state = "mainScreen";
     }
     newJeans.play();
+}
+
+function textHover(){
+    if((mouseX >= 700 && mouseX <= 900)&&(mouseY >= 25 && mouseY <= 250)){
+        image(showDatai, 290, 420);
+    }
+
+    if((mouseX >= 1100 && mouseX <= 1450)&&(mouseY >= 200 && mouseY <= 550)){
+        image(opt, 290, 420);
+    }
 }
