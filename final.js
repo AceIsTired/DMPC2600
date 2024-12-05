@@ -20,7 +20,7 @@ function preload(){
         images.push(loadImage(`data/${i}.PNG`));
     }
 
-    cutscene1 = createVideo("videos/Cutscene1.mp4");
+    //cutscene1 = createVideo("videos/Cutscene1.mp4");
     cockpit = loadImage("images/cockpit.gif");
     openbg = loadImage("images/openingbg.jpg")
     shopbg = loadImage("images/Vyra.png");
@@ -130,10 +130,10 @@ function setup(){
     localTime = "none"
     
     // Cutscenes
-    cutscene1.position(0,0);
-    cutscene1.size(AUTO, AUTO)
-    cutscene1.pause();
-    cutscene1.hide();
+    //cutscene1.position(0,0);
+   // cutscene1.size(AUTO, AUTO)
+    //cutscene1.pause();
+    //cutscene1.hide();
     sceneMade = false;
 }
 
@@ -425,18 +425,18 @@ function openingScene(){
 }
 
 function introCutscene(){
-    if(sceneMade == false){
-        cutscene1.show();
-        cutscene1.play();
-        cutscene1.loop = true;
-        let but = makeButton("Next", 1000, 250, 200, 100, () => {
-            but.hide();
-            sceneChange("exitCutscene1")});
-        sceneMade = true;
-    }
-    else{
+    //if(sceneMade == false){
+        //cutscene1.show();
+        //cutscene1.play();
+        //cutscene1.loop = true;
+        //let but = makeButton("Next", 1000, 250, 200, 100, () => {
+            //but.hide();
+            //sceneChange("exitCutscene1")});
+        //sceneMade = true;
+   // }
+    //else{
 
-    }
+    //}
     
 }
 
@@ -780,8 +780,8 @@ function speaking(textArray, x = 0, y = 100, width = 300, height = 100, speed = 
 
 function sceneChange(newscene){
     if(newscene == "exitCutscene1"){
-        cutscene1.pause();
-        cutscene1.hide();
+        //cutscene1.pause();
+        //cutscene1.hide();
         scene = 'cockpit'
     }
     else if(newscene == "cockpit"){
@@ -902,7 +902,7 @@ function makeClock(){
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     if(scene == "intro"){
-        cutscene1.resize(AUTO, AUTO)
+        //cutscene1.resize(AUTO, AUTO)
     }
 }
 
