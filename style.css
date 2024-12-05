@@ -2,14 +2,22 @@
     margin: 0
 }
 
+html {
+    overflow: hidden;
+    margin: 0;
+    cursor: url('cursor/cursor_default.png'), default;
+    text-shadow: 2px 2px darkgray
+    
+}
+
+
 body {
     overflow: hidden;
     background-color: #3b1f0e;
     background-image: url('images/space.gif');
     background-size: cover;
     color: #ffc9a8;
-    /* font-family: 'Times New Roman', Times, serif; */
-    font-size: 20;
+    /* font-size: 20; */
 }
 
 @font-face {
@@ -21,17 +29,24 @@ body {
     font-family: 'NewHiScore';
 }
 
+
+
+
 .button {
+    z-index: 5;
+    /* border: none; */
     cursor: url('cursor/cursor_select.png'), pointer;
 }
 
-html {
-    overflow: hidden;
-    margin: 0;
-    cursor: url('cursor/cursor_default.png'), default;
-}
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
-a {
+
+
+
+.pointer {
     cursor: url('cursor/cursor_select.png'), pointer;
 }
 
